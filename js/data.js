@@ -1,14 +1,14 @@
-import { getRandomInteger } from './utils.js';
-import { idGenerator } from './utils.js';
-import { getRandomArrayElement } from './utils.js';
-import { PHOTOS_COUNT } from './constants.js';
-import { LIKES_MIN_COUNT } from './constants.js';
-import { LIKES_MAX_COUNT } from './constants.js';
-import { COMMENTS_COUNT } from './constants.js';
-import { COMMENTS_TEXT } from './constants.js';
-import { DESCRIPTIONS } from './constants.js';
-import { NAMES } from './constants.js';
-import { AVATAR_COUNT } from './constants.js';
+import {getRandomInteger} from './utils.js';
+import {idGenerator} from './utils.js';
+import {getRandomArrayElement} from './utils.js';
+import {PHOTOS_COUNT} from './constants.js';
+import {LIKES_MIN_COUNT} from './constants.js';
+import {LIKES_MAX_COUNT} from './constants.js';
+import {COMMENTS_COUNT} from './constants.js';
+import {COMMENTS_TEXT} from './constants.js';
+import {DESCRIPTIONS} from './constants.js';
+import {NAMES} from './constants.js';
+import {AVATAR_COUNT} from './constants.js';
 
 const createMessage = () => {
   const messageArray = [];
@@ -54,4 +54,4 @@ const getPhotosList = () => {
 
 getPhotosList();
 
-export { getPhotosList };
+export {getPhotosList};
