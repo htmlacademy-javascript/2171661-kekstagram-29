@@ -19,11 +19,11 @@ const NAMES = [
 ];
 const AVATAR_COUNT = 6;
 
-export { PHOTOS_COUNT };
-export { LIKES_MIN_COUNT };
-export { LIKES_MAX_COUNT };
-export { COMMENTS_COUNT };
-export { COMMENTS_TEXT };
-export { DESCRIPTIONS };
-export { NAMES };
-export { AVATAR_COUNT };
+export {PHOTOS_COUNT};
+export {LIKES_MIN_COUNT};
+export {LIKES_MAX_COUNT};
+export {COMMENTS_COUNT};
+export {COMMENTS_TEXT};
+export {DESCRIPTIONS};
+export {NAMES};
+export {AVATAR_COUNT};
