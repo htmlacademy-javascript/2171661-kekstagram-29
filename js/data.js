@@ -23,7 +23,7 @@ const generateCommentId = idGenerator();
 
 const createComment = () => ({
   id: generateCommentId(),
-  avatar: `img/${getRandomInteger(1, AVATAR_COUNT)}.svg`,
+  avatar: `img/avatar-${getRandomInteger(1, AVATAR_COUNT)}.svg`,
   message: createMessage(),
   name: getRandomArrayElement(NAMES)
 });
