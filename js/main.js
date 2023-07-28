@@ -1,4 +1,4 @@
-import {getPhotosList} from './data.js';
 import {createThumbnails} from './thumbnails.js';
+import {getData} from './api.js';
 
-createThumbnails(getPhotosList());
+getData((thumbnails) => createThumbnails(thumbnails));
