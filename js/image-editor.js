@@ -74,6 +74,7 @@ const photoScaleContainer = document.querySelector('.img-upload__scale');
 const scaleInputElement = photoScaleContainer.querySelector('.scale__control--value');
 const imageInputElement = document.querySelector('.img-upload__preview img');
 const effectLevelElement = document.querySelector('.img-upload__effect-level');
+effectLevelElement.classList.add('hidden');
 const effectValueElement = effectLevelElement.querySelector('.effect-level__value');
 const effectSliderElement = effectLevelElement.querySelector('.effect-level__slider');
 const effectListElement = document.querySelector('.effects__list');
@@ -121,8 +122,10 @@ const getImageEffect = (evt) => {
     effectSliderElement.noUiSlider.destroy();
   }
   if (currentFilter === 'none') {
+    effectLevelElement.classList.add('hidden');
     resetEffect();
   } else {
+    effectLevelElement.classList.remove('hidden');
     noUiSlider.create(effectSliderElement, EFFECTS[currentFilter]);
     imageInputElement.className = `effects__preview--${currentFilter}`;
 
