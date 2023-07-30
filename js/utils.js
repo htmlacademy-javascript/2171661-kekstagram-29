@@ -41,9 +41,27 @@ const showAlert = (message) => {
   }, ALERT_SHOW_TIME);
 };
 
+const checkCommentLength = (comment, maxLength) => comment.length <= maxLength;
+
+const checkUniqueElement = (value) => new Set(value).size === value.length;
+
+// Функция взята из интернета и доработана
+// Источник - https://www.freecodecamp.org/news/javascript-debounce-example
+
+function debounce (callback, timeoutDelay = 500) {
+  let timeoutId;
+  return (...rest) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
+  };
+}
+
 
 export {getRandomInteger};
 export {idGenerator};
 export {getRandomArrayElement};
 export {isEscapeKey};
 export {showAlert};
+export {checkCommentLength};
+export {checkUniqueElement};
+export {debounce};
