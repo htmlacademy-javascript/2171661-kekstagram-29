@@ -1,6 +1,7 @@
-const NUMBER_OF_FILTERS = 10;
+const POST_FILTER_NUMBER = 10;
 
 const imageFiltersContainer = document.querySelector('.img-filters');
+imageFiltersContainer.classList.remove('img-filters--inactive');
 const defaultFilterButton = imageFiltersContainer.querySelector('#filter-default');
 const randomFilterButton = imageFiltersContainer.querySelector('#filter-random');
 const discussedFilterButton = imageFiltersContainer.querySelector('#filter-discussed');
@@ -21,7 +22,7 @@ const compareThumbnails = (thumbnailA, thumbnailB) => {
   return rankB - rankA;
 };
 
-const getFilters = (thumbnails, createThumbnails) => {
+const setFilters = (thumbnails, createThumbnails) => {
   defaultFilterButton.addEventListener('click', (evt) => {
     createThumbnails(thumbnails);
     setActiveFilter(evt.target);
@@ -30,7 +31,7 @@ const getFilters = (thumbnails, createThumbnails) => {
     createThumbnails(thumbnails
       .slice()
       .sort(shuffleThumbnails)
-      .slice(0, NUMBER_OF_FILTERS));
+      .slice(0, POST_FILTER_NUMBER));
     setActiveFilter(evt.target);
   });
   discussedFilterButton.addEventListener('click', (evt) => {
@@ -41,4 +42,4 @@ const getFilters = (thumbnails, createThumbnails) => {
   });
 };
 
-export {getFilters};
+export {setFilters};
