@@ -21,7 +21,7 @@ const compareThumbnails = (thumbnailA, thumbnailB) => {
   return rankB - rankA;
 };
 
-const filters = (thumbnails, createThumbnails) => {
+const getFilters = (thumbnails, createThumbnails) => {
   defaultFilterButton.addEventListener('click', (evt) => {
     createThumbnails(thumbnails);
     setActiveFilter(evt.target);
@@ -41,4 +41,4 @@ const filters = (thumbnails, createThumbnails) => {
   });
 };
 
-export {filters};
+export {getFilters};

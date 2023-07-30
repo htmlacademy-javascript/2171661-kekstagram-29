@@ -3,8 +3,8 @@ import {checkUniqueElement} from './utils';
 import {isEscapeKey} from './utils';
 import {showAlert} from './utils';
 import {sendData} from 'api.js';
-import {successModalOpen} from './user-messages';
-import {errorModalOpen} from './user-messages';
+import {successModalOpen} from './upload-messages';
+import {errorModalOpen} from './upload-messages';
 import {clearScaleValue} from './image-editor';
 import {resetEffect} from './image-editor';
 
