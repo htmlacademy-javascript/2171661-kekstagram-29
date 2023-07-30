@@ -1,6 +1,7 @@
 const POST_FILTER_NUMBER = 10;
 
 const imageFiltersContainer = document.querySelector('.img-filters');
+// Ни как не могу придумать лучшей реализации чем эта, но понимаю что в теории можно сделать лучше.
 imageFiltersContainer.classList.remove('img-filters--inactive');
 const defaultFilterButton = imageFiltersContainer.querySelector('#filter-default');
 const randomFilterButton = imageFiltersContainer.querySelector('#filter-random');
